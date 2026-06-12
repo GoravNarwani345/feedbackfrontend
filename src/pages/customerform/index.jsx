@@ -88,7 +88,16 @@ export default function CustomerForm() {
 		<div className="max-w-2xl mx-auto p-6 bg-gray-50">
 			<ToastContainer position="top-right" autoClose={3000} />
 			<motion.div initial="hidden" animate="show" variants={container} className="bg-white shadow-lg rounded-xl p-6 ring-1 ring-gray-100">
-				<motion.h2 variants={item} className="text-2xl font-semibold mb-1 text-gray-900">Customer Feedback</motion.h2>
+				<div className="flex justify-between items-center mb-1">
+					<motion.h2 variants={item} className="text-2xl font-semibold text-gray-900">Customer Feedback</motion.h2>
+					<motion.button 
+						variants={item}
+						onClick={() => navigate('/admin')}
+						className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition"
+					>
+						Admin Dashboard &rarr;
+					</motion.button>
+				</div>
 				<motion.p variants={item} className="text-sm text-gray-500 mb-4">We appreciate your feedback — it helps us improve.</motion.p>
 
 				{message && (
