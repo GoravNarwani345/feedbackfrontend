@@ -43,7 +43,7 @@ export default function CustomerForm() {
 
 		setLoading(true)
 		try {
-			const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000'
+			const base = import.meta.env.VITE_API_BASE || 'https://feedbackbackend-raa7.onrender.com'
 			const payload = {
 				customerName: form.name,
 				Email: form.email,

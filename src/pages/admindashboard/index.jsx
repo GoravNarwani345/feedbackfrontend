@@ -20,7 +20,7 @@ export default function AdminDashboard() {
       setLoading(true)
       setError(null)
       try {
-        const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000'
+        const base = import.meta.env.VITE_API_BASE || 'https://feedbackbackend-raa7.onrender.com'
         const res = await fetch(`${base}/api/feedback`)
         if (!res.ok) throw new Error('Failed to fetch feedback')
         const data = await res.json()
